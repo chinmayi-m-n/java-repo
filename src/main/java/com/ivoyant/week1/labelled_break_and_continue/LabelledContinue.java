@@ -1,0 +1,16 @@
+package com.ivoyant.week1.labelled_break_and_continue;
+
+public class LabelledContinue {
+    public static void main(String[] args) {
+        labelName:
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=5;j++){
+                //when i==3 iteration of the loop with label labelName is skipped
+                if(i==3)continue labelName;
+                System.out.print(i);
+            }
+            System.out.println();
+
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="laptop" class="com.ivoyant.week1.spring_dependency_injection.Laptop" />
+    <bean id="desktop" class="com.ivoyant.week1.spring_dependency_injection.Desktop" />
+    <bean id="alien" class="com.ivoyant.week1.spring_dependency_injection.Alien">
+        <property name="age" value="21"></property>
+<!--        wiring laptop objct to alien object-->
+
+        <property name="com" ref="laptop"></property>
+    </bean>
+
+
+
+</beans>

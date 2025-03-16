@@ -1,0 +1,9 @@
+package com.ivoyant.week1.spring_dependency_injection;
+
+public class Laptop implements Computer{
+
+    public void compile(){
+        System.out.println("compiling using laptop........");
+
+    }
+}

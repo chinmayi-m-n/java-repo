@@ -19,13 +19,15 @@ public class AppConfig {
         return new Desktop();
     }
     @Bean(name={"lap"})
+    @Primary
     public Laptop laptop(){
         return new Laptop();
     }
     @Bean
-    public Alien alien(){
-        //using constructor injection to inject Computer dependency to alien bean
-        return new Alien(desktop());//desktop returns Desktop object
+    public Alien alien(Computer com){//autowiring byType
+        //using injected dependency to set the property of Alien class
+        //we can set the property either through setter injection or constructor injection
+        return new Alien(com);//using constructor injection to set com property of Alien
     }
 
 

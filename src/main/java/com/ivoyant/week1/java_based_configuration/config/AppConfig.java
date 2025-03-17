@@ -24,11 +24,8 @@ public class AppConfig {
     }
     @Bean
     public Alien alien(){
-        //using setter injection to set value of com property of Alien
-        //Alien is dependent on dependency of type Computer to code
-        Alien obj=new Alien();
-        obj.setCom(desktop());
-        return obj;
+        //using constructor injection to inject Computer dependency to alien bean
+        return new Alien(desktop());//desktop returns Desktop object
     }
 
 

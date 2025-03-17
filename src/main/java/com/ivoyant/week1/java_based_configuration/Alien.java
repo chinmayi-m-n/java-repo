@@ -5,6 +5,9 @@ public class Alien {
     //he code and compile using either laptop or desktop depending on the type of object that we pass
     //we want spring to inject dependency for com
     Computer com;
+    public Alien(Computer com){
+        this.com=com;
+    }
     public void setCom(Computer com){
         this.com=com;
     }

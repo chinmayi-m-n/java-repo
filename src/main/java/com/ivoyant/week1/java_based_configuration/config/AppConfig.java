@@ -24,7 +24,7 @@ public class AppConfig {
         return new Laptop();
     }
     @Bean
-    public Alien alien(Computer com){//autowiring byType
+    public Alien alien(@Qualifier("lap") Computer com){//autowiring byName using @Qualifier("beanName")
         //using injected dependency to set the property of Alien class
         //we can set the property either through setter injection or constructor injection
         return new Alien(com);//using constructor injection to set com property of Alien

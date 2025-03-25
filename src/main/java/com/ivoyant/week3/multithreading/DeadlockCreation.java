@@ -5,6 +5,7 @@ public class DeadlockCreation {
         //in below case thread1 by acquiring lock1 waiting for lock2 which is acquired by thread2
         //thread2 by acquiring lock2 waiting for lock1 which is acquired by thread1
         //circular wait => deadlock
+
         String lock1="lock1",lock2="lock2";
         Thread t1=new Thread(
                 new Runnable(){

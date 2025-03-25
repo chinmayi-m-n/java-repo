@@ -45,6 +45,7 @@ public class DeadlockPreventionByAcquiringLockInSameOrder {
         },"thread2");
         t1.setPriority(Thread.MAX_PRIORITY);
         t1.start();
+
         t2.start();
     }
 }

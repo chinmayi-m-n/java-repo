@@ -1,0 +1,12 @@
+### IntelliJ IDEA ###
+.idea
+.mvn
+resources
+test
+target
+.gitattributes
+.gitignore
+HELP.md
+mvnw
+mvnw.cmd
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>List of Employees</h3>
+    <hr>
+    <table style="border: 2px solid black; border-collapse: collapse;">
+        <thead class="table-dark">
+        <tr>
+            <th style="border: 2px solid black; padding: 5px;">ID</th>
+            <th style="border: 2px solid black; padding: 5px;">First Name</th>
+            <th style="border: 2px solid black; padding: 5px;">Last Name</th>
+            <th style="border: 2px solid black; padding: 5px;">Email</th>
+            <th style="border: 2px solid black; padding: 5px;">Update</th>
+            <th style="border: 2px solid black; padding: 5px;">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+<!--        for each employee in employees-->
+        <tr th:each="employee : ${employees}">
+<!--            employees attribute is assciated vth lst-->
+            <td th:text="${employee.id}" style="border: 2px solid black; padding: 5px;"/>
+            <td th:text="${employee.firstName}" style="border: 2px solid black; padding: 5px;"/>
+            <td th:text="${employee.lastName}" style="border: 2px solid black; padding: 5px;"/>
+            <td th:text="${employee.email}" style="border: 2px solid black; padding: 5px;"/>
+<!--            when user clicks on update/delete anchor tag request is sent along with id as a path variable-->
+            <td><a th:href="@{/employee/update/{id}(id=${employee.id})}" style="border: 2px solid black; padding: 5px;">UPDATE</a></td>
+            <td><a th:href="@{/employee/delete/{id}(id=${employee.id})}" style="border: 2px solid black; padding: 5px;">DELETE</a></td>
+
+        </tr>
+        </tbody>
+    </table>
+    <br> <br>
+    <a href="/employee/add">ADD Employee</a>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>UPDATE Employee</title>
+</head>
+<body>
+<h1>Enter updated details of Employee </h1>
+<form th:action="@{/updateEmployee/{id}(id=${id})}" method="POST">
+    First name: <input type="text" name="firstName" required>
+    <br><br>
+    Last name: <input type="text" name="lastName" required>
+    <br><br>
+    Email: <input type="email" name="email" required>
+    <br><br>
+    <input type="submit" value="ADD">
+</form>
+</body>
+</html>
